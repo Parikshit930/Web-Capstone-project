@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Delicious Food Delivered Fresh</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    
+    <!-- Navbar Section -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>Foodie</span>
+                    </div>
+                    
+                    <!-- Navigation Links -->
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#menu" class="nav-link">Menu</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    
+                    <!-- Cart Icon -->
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    
+                    <!-- Hamburger Menu -->
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Left Side: Text Content -->
+                <div class="hero-text">
+                    <h1>Delicious Food Delivered Fresh</h1>
+                    <p>Experience the best flavors from top restaurants delivered right to your doorstep. Fast, fresh, and delicious meals await you!</p>
+                    <button class="cta-btn">Order Now</button>
+                </div>
+                
+                <!-- Right Side: Hero Image -->
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=600&fit=crop" alt="Delicious Food">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search for your favorite food..." class="search-input">
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+            <p class="search-message" id="searchMessage"></p>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Browse Categories</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <p>Pizza</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-hamburger"></i>
+                    </div>
+                    <p>Burger</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-glass-martini-alt"></i>
+                    </div>
+                    <p>Drinks</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <p>Desserts</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <p>North Indian</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
+                    <p>South Indian</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Dishes Section -->
+    <section id="menu" class="popular-dishes">
+        <div class="container">
+            <h2 class="section-title">Popular Dishes</h2>
+            <div class="dishes-grid" id="dishesGrid">
+                
+                <!-- Food Card 1 -->
+                <div class="food-card" data-name="margherita pizza">
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop" alt="Margherita Pizza">
+                    </div>
+                    <div class="food-info">
+                        <h3>Margherita Pizza</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="price-cart">
+                            <span class="price">$12.99</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Card 2 -->
+                <div class="food-card" data-name="cheese burger">
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="Cheese Burger">
+                    </div>
+                    <div class="food-info">
+                        <h3>Cheese Burger</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <div class="price-cart">
+                            <span class="price">$9.99</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Card 3 -->
+                <div class="food-card" data-name="pasta carbonara">
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=400&h=300&fit=crop" alt="Pasta Carbonara">
+                    </div>
+                    <div class="food-info">
+                        <h3>Pasta Carbonara</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <div class="price-cart">
+                            <span class="price">$14.99</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Card 4 -->
+                <div class="food-card" data-name="chicken biryani">
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&h=300&fit=crop" alt="Chicken Biryani">
+                    </div>
+                    <div class="food-info">
+                        <h3>Chicken Biryani</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="price-cart">
+                            <span class="price">$11.99</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Card 5 -->
+                <div class="food-card" data-name="sushi platter">
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop" alt="Sushi Platter">
+                    </div>
+                    <div class="food-info">
+                        <h3>Sushi Platter</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <div class="price-cart">
+                            <span class="price">$18.99</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Card 6 -->
+                <div class="food-card" data-name="chocolate cake">
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Chocolate Cake">
+                    </div>
+                    <div class="food-info">
+                        <h3>Chocolate Cake</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="price-cart">
+                            <span class="price">$7.99</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <!-- Left Side: Image -->
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=600&fit=crop" alt="About Us">
+                </div>
+                
+                <!-- Right Side: Text -->
+                <div class="about-text">
+                    <h2>About Our Service</h2>
+                    <p>At Foodie, we're passionate about bringing delicious, restaurant-quality meals straight to your door. With a curated selection of top-rated restaurants and cuisines, we make it easy to enjoy your favorite dishes without leaving home.</p>
+                    <p>Our mission is simple: connect food lovers with the best local restaurants while ensuring fast, reliable delivery. Whether you're craving pizza, burgers, biryani, or desserts, we've got you covered!</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i> Fast & Reliable Delivery</li>
+                        <li><i class="fas fa-check-circle"></i> Wide Selection of Cuisines</li>
+                        <li><i class="fas fa-check-circle"></i> Quality Guaranteed</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 Customer Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <!-- Footer Column 1: About -->
+                <div class="footer-column">
+                    <h3>Foodie</h3>
+                    <p>Delivering happiness, one meal at a time. Order from the best restaurants in your area.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Footer Column 2: Quick Links -->
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Footer Column 3: Contact -->
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> support@foodie.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, NYC</li>
+                    </ul>
+                </div>
+                
+                <!-- Footer Column 4: Newsletter -->
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get special offers and updates!</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Foodie. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
